@@ -1,4 +1,4 @@
-# Test contracts
+### Test contracts
 
 ```solidity
 // SPDX-License-Identifier: MIT
