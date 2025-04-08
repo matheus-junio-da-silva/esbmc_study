@@ -1,9 +1,11 @@
-### note: change the file path to your current path
+# guide to run the tool
 
-### generate ast (compiler contract version 8 or higher)
+note: change the file path to your current path  
 
-solc --ast-compact-json file.sol > file.solast
+generate ast (compiler contract version 8 or higher)  
 
-### run the solidity file
+`solc --ast-compact-json file.sol > file.solast`  
 
-./build/src/esbmc/esbmc --sol /home/mat/workspace/esbmc/file.sol /home/mat/workspace/esbmc/file.solast --incremental-bmc
+run the solidity file  
+
+`./build/src/esbmc/esbmc --sol /home/mat/workspace/esbmc/file.sol /home/mat/workspace/esbmc/file.solast --incremental-bmc`
