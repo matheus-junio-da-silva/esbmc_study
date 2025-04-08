@@ -1,6 +1,6 @@
 ### launch.json
 
-> Trocar os caminhos
+> **importante:** Trocar os caminhos
 
 ```json
 {
