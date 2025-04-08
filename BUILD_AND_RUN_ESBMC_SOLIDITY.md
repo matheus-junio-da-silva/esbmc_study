@@ -1,6 +1,6 @@
 ### Como configurar, compilar e executar o ESBMC a partir do código-fonte para contratos em solidity
 
-Este guia mostra como configurar o ambiente, instalar dependencias e compilar o [ESBMC](https://github.com/esbmc/esbmc).
+Este guia mostra como configurar o ambiente, instalar dependencia, compilar e executar o [ESBMC](https://github.com/esbmc/esbmc).
 
 ---
 
