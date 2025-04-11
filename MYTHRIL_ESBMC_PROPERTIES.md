@@ -1,6 +1,10 @@
+### ESBMC:
+
 Print da instância do solver no momento antes da detecção (check) da vulnerabilidade:  
 
-> É possível verificar a satisfatibilidade através desse site: https://jfmc.github.io/z3-play/
+> É possível verificar a satisfatibilidade através desse site (só copiar e colar a instância do solver) : https://jfmc.github.io/z3-play/
+
+> OBS: As propriedades são os asserts
 
 ```
 ; 
@@ -66,3 +70,51 @@ Print da instância do solver no momento antes da detecção (check) da vulnerab
 (not $x50))))))))
 (check-sat)
 ```
+
+#### model:
+```
+(
+  (define-fun |sol:@C@DivisionByZero@_ESBMC_Nondet_Extcall_DivisionByZero#::$tmp::return_value$_nondet_bool$1?1!0&0#1| () Bool
+    true)
+  (define-fun |sol:@C@DivisionByZero@F@_ESBMC_Main_DivisionByZero#::$tmp::return_value$_nondet_bool$1?1!0&0#1| () Bool
+    true)
+  (define-fun |execution_statet::\\\\guard_exec?0!0| () Bool
+    true)
+  (define-fun |sol:@C@DivisionByZero@F@divide@b#7&0#0| () (_ BitVec 256)
+    (_ bv0 256))
+  (define-fun |nondet$symex::nondet6| () Bool
+    true)
+  (define-fun |nondet$symex::nondet5| () Bool
+    true)
+  (define-fun INVALID () struct_type_pointer_struct
+    (struct_type_pointer_struct (_ bv1 64) (_ bv0 64)))
+  (define-fun NULL () struct_type_pointer_struct
+    (struct_type_pointer_struct (_ bv0 64) (_ bv0 64)))
+  (define-fun __ESBMC_addrspace_arr_1 () (Array (_ BitVec 64) struct_type_addr_space_type)
+    ((as const (Array (_ BitVec 64) struct_type_addr_space_type))
+  (struct_type_addr_space_type (_ bv0 64) (_ bv0 64))))
+  (define-fun __ESBMC_addrspace_arr_3 () (Array (_ BitVec 64) struct_type_addr_space_type)
+    (store ((as const (Array (_ BitVec 64) struct_type_addr_space_type))
+         (struct_type_addr_space_type (_ bv0 64) (_ bv0 64)))
+       (_ bv1 64)
+       (struct_type_addr_space_type (_ bv1 64) (_ bv18446744073709551615 64))))
+  (define-fun __ESBMC_addrspace_arr_2 () (Array (_ BitVec 64) struct_type_addr_space_type)
+    ((as const (Array (_ BitVec 64) struct_type_addr_space_type))
+  (struct_type_addr_space_type (_ bv0 64) (_ bv0 64))))
+  (define-fun __ESBMC_ptr_addr_range_1 () struct_type_addr_space_type
+    (struct_type_addr_space_type (_ bv1 64) (_ bv18446744073709551615 64)))
+  (define-fun __ESBMC_ptr_addr_range_0 () struct_type_addr_space_type
+    (struct_type_addr_space_type (_ bv0 64) (_ bv0 64)))
+  (define-fun __ESBMC_ptr_obj_end_1 () (_ BitVec 64)
+    (_ bv18446744073709551615 64))
+  (define-fun __ESBMC_ptr_obj_start_1 () (_ BitVec 64)
+    (_ bv1 64))
+  (define-fun __ESBMC_ptr_obj_end_0 () (_ BitVec 64)
+    (_ bv0 64))
+  (define-fun __ESBMC_ptr_obj_start_0 () (_ BitVec 64)
+    (_ bv0 64))
+)
+```
+
+### MYTHRIL
+
