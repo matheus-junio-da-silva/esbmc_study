@@ -1,5 +1,9 @@
 # Propiedades geradas pelas ferramentas Mythril e ESBMC
 
+### Introdução
+
+Ambas as ferramentas confirmaram a vulnerabilidade no contrato. A partir dessas análises, foram extraídas as propriedades (constraints) que cada ferramenta gerou.
+
 #### contrato de exemplo utilizado:
 
 ```solidity
