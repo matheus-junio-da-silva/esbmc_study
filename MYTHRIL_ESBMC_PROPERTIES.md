@@ -24,7 +24,7 @@ contract AssertionExample {
 
 ### Comparação entre as ferramentas
 
-O ESBMC trabalha em um nível mais próximo do código fonte, enquanto o Mythril trabalha no nível do bytecode da EVM
+O ESBMC trabalha em um nível mais próximo do código fonte, enquanto o Mythril trabalha no nível do bytecode da EVM. Além disso, o Mythril considera aspectos específicos dos contratos como `balance`(Representa o **saldo de ETH** de cada conta/contrato na blockchain), `sender`(Corresponde a `msg.sender`, ou seja, o endereço que está chamando a função atual), e `call_value`(Corresponde a `msg.value`, ou seja, a quantidade de ETH (em wei) enviada junto com a chamada de função), enquanto o ESBMC se concentra mais na lógica interna do contrato.
 
 ### ESBMC:
 
