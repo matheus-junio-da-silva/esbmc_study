@@ -1,5 +1,7 @@
 Print da instância do solver no momento antes da detecção (check) da vulnerabilidade:  
 
+> É possível verificar a satisfatibilidade através desse site: https://jfmc.github.io/z3-play/
+
 ```
 ; 
 (set-info :status unknown)
