@@ -503,3 +503,19 @@ mat@matheusjunio:~/workspace/esbmc$
 
 
 
+
+
+
+
+
+
+
+Ótimo! Funcionou aqui os comandos. Porém, eu queria saber como funciona essa geração dessa propriedade. Ela é sempre a mesma propriedade? Por exemplo, um template pronto que só coloca as variáveis simbólicas ou algo do tipo? Ou alguma coisa diferente? Eu queria saber o padrão dessa propriedade que ela gera. Pra mim, se eu quiser gerar em outros contratos, eu posso também. Ou se não, quando eu quiser criar um verificador formal, eu quero saber como o código gera essa propriedade automática de overflow.Eu queria saber, por exemplo, para o contrato X, o que ele extrai do contrato, o que ele extrai do contrato para verificar esse contrato, qual a matematica por tras disso, qual propriedade que ele gera, qual o padrão dessa propriedade, é sempre a mesma, muda apenas as variáveis ali de acordo com o contrato? Então, é uma coisa desse tipo, para eu tentar replicar em outro código, por exemplo.
+
+
+
+
+
+
+
+
