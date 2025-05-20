@@ -107,5 +107,5 @@ solc --ast-compact-json contract.sol > contract.solast
 ./build/src/esbmc/esbmc --sol contract.sol contract.solast --incremental-bmc
 ```
 
-
+--overflow-check
 
