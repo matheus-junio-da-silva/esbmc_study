@@ -107,5 +107,8 @@ solc --ast-compact-json contract.sol > contract.solast
 ./build/src/esbmc/esbmc --sol contract.sol contract.solast --incremental-bmc
 ```
 
---overflow-check
+```bash
+solc --ast-compact-json integer_overflow_add.sol > integer_overflow_add.solast
+./build/src/esbmc/esbmc --sol integer_overflow_add.sol integer_overflow_add.solast --incremental-bmc --overflow-check
+```
 
