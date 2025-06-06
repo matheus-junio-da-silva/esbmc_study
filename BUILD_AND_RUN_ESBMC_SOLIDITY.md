@@ -122,6 +122,15 @@ sudo apt-get install -y clang-16 llvm-16 clang-tidy-16 python-is-python3 python3
 ```
 
 ```bash
+https://github.com/esbmc/esbmc.git
+```
+
+```bash
+cd esbmc
+mkdir build && cd build
+```
+
+```bash
 rm -rf build
 mkdir build
 cd build
