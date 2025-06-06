@@ -112,3 +112,15 @@ solc --ast-compact-json integer_overflow_add.sol > integer_overflow_add.solast
 ./build/src/esbmc/esbmc --sol integer_overflow_add.sol integer_overflow_add.solast --incremental-bmc --overflow-check
 ```
 
+```bash
+cmake .. \
+  -DDOWNLOAD_DEPENDENCIES=ON \
+  -DENABLE_Z3=1 \
+  -DENABLE_SOLIDITY_FRONTEND=On \
+  -DBUILD_STATIC=OFF \
+  -DCMAKE_BUILD_TYPE=Debug \
+  -DLLVM_DIR=/usr/lib/llvm-16/cmake \
+  -DClang_DIR=/usr/lib/llvm-16/cmake \
+  -DOVERRIDE_CLANG_HEADER_DIR=/usr/lib/llvm-16/lib/clang/16/include
+```
+
