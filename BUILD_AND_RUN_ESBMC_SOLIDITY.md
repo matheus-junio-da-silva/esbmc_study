@@ -117,7 +117,6 @@ sudo apt install llvm-16-dev clang-16 libclang-16-dev
 ```
 
 ```bash
-cd /home/mat/workspace/esbmc
 rm -rf build
 mkdir build
 cd build
