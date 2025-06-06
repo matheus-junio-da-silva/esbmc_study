@@ -117,6 +117,11 @@ sudo apt install llvm-16-dev clang-16 libclang-16-dev
 ```
 
 ```bash
+sudo apt update
+sudo apt-get install -y clang-16 llvm-16 clang-tidy-16 python-is-python3 python3 git ccache unzip wget curl bison flex g++-multilib linux-libc-dev libboost-all-dev libz3-dev libclang-16-dev libclang-cpp-dev cmake
+```
+
+```bash
 rm -rf build
 mkdir build
 cd build
