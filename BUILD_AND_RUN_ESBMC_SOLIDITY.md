@@ -134,3 +134,10 @@ cmake .. \
   -DOVERRIDE_CLANG_HEADER_DIR=/usr/lib/llvm-16/lib/clang/16/include
 ```
 
+```bash
+cmake .. -DDOWNLOAD_DEPENDENCIES=ON -DENABLE_Z3=1 -DENABLE_SOLIDITY_FRONTEND=On -DBUILD_STATIC=OFF -DCMAKE_BUILD_TYPE=Debug
+```
+
+```bash
+make -j$(nproc)
+```
