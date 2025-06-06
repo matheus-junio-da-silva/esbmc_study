@@ -113,6 +113,17 @@ solc --ast-compact-json integer_overflow_add.sol > integer_overflow_add.solast
 ```
 
 ```bash
+sudo apt install llvm-16-dev clang-16 libclang-16-dev
+```
+
+```bash
+cd /home/mat/workspace/esbmc
+rm -rf build
+mkdir build
+cd build
+```
+
+```bash
 cmake .. \
   -DDOWNLOAD_DEPENDENCIES=ON \
   -DENABLE_Z3=1 \
