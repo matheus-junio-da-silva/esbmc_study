@@ -113,6 +113,7 @@
         "--sol",
         "${workspaceFolder}/integer_overflow_add.sol",
         "${workspaceFolder}/integer_overflow_add.solast",
+        "--incremental-bmc",
         "--overflow-check"
       ],
       "stopAtEntry": false,
@@ -125,11 +126,12 @@
         {
           "description": "Enable pretty-printing for gdb",
           "text": "-enable-pretty-printing",
-          "ignoreFailures": false
+          "ignoreFailures": true
         }
       ]
     }
   ]
 }
+
 
 ```
