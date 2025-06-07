@@ -177,3 +177,8 @@ make -j2
 ./build/src/esbmc/esbmc --sol integer_overflow_add.sol integer_overflow_add.solast --incremental-bmc --overflow-check
 ```
 
+ ### pode ser util
+
+```bash
+cd /home/mat/esbmc && ./build/src/esbmc/esbmc --sol simple_overflow.sol simple_overflow.solast --incremental-bmc --overflow-check > debug_output.log 2>&1 && cat debug_output.log
+```
