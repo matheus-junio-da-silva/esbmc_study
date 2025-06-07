@@ -134,6 +134,12 @@ sudo apt-get install -y clang-16 llvm-16 clang-tidy-16 python-is-python3 python3
 ```
 
 ```bash
+sudo add-apt-repository ppa:ethereum/ethereum
+sudo apt update
+sudo apt install solc
+```
+
+```bash
 https://github.com/esbmc/esbmc.git
 ```
 
