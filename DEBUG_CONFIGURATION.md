@@ -99,3 +99,38 @@
 }
 
 ```
+
+```json
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug ESBMC with Enhanced Variable Display",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/src/esbmc/esbmc",
+      "args": [
+        "--symex-trace",
+        "--symex-ssa-trace",
+        "--sol",
+        "${workspaceFolder}/integer_overflow_add.sol",
+        "${workspaceFolder}/integer_overflow_add.solast",
+        "--overflow-check"
+      ],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "miDebuggerPath": "/usr/bin/gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": false
+        }
+    }
+  ]
+}
+
+```
