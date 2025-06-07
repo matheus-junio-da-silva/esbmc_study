@@ -110,8 +110,6 @@
       "request": "launch",
       "program": "${workspaceFolder}/build/src/esbmc/esbmc",
       "args": [
-        "--symex-trace",
-        "--symex-ssa-trace",
         "--sol",
         "${workspaceFolder}/integer_overflow_add.sol",
         "${workspaceFolder}/integer_overflow_add.solast",
