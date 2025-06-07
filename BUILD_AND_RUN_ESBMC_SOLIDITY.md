@@ -160,9 +160,14 @@ cmake .. -DENABLE_Z3=1 -DENABLE_SOLIDITY_FRONTEND=On -DCMAKE_BUILD_TYPE=Debug
 ```
 
 ```bash
+cmake .. -DENABLE_Z3=1 -DENABLE_SOLIDITY_FRONTEND=On -DCMAKE_BUILD_TYPE=Debug -DBUILD_TESTING=Off -DENABLE_REGRESSION=Off
+```
+
+```bash
 make -j2
 ```
 
 ```bash
 ./build/src/esbmc/esbmc --sol integer_overflow_add.sol integer_overflow_add.solast --incremental-bmc --overflow-check
 ```
+
