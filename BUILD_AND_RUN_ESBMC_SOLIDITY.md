@@ -113,6 +113,18 @@ solc --ast-compact-json integer_overflow_add.sol > integer_overflow_add.solast
 ```
 
 ```bash
+cmake .. \
+  -DDOWNLOAD_DEPENDENCIES=ON \
+  -DENABLE_Z3=1 \
+  -DENABLE_SOLIDITY_FRONTEND=On \
+  -DBUILD_STATIC=OFF \
+  -DCMAKE_BUILD_TYPE=Debug \
+  -DLLVM_DIR=/usr/lib/llvm-16/cmake \
+  -DClang_DIR=/usr/lib/llvm-16/cmake \
+  -DOVERRIDE_CLANG_HEADER_DIR=/usr/lib/llvm-16/lib/clang/16/include
+```
+
+```bash
 sudo apt install llvm-16-dev clang-16 libclang-16-dev
 ```
 ## TEM QUE USAR ESSA PARA SOLIDITY, TODAS VERSOES 16
@@ -131,21 +143,16 @@ mkdir build && cd build
 ```
 
 ```bash
-rm -rf build
-mkdir build
-cd build
+sudo fallocate -l 4G /swapfile
+sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+sudo swapon /swapfile
 ```
 
 ```bash
-cmake .. \
-  -DDOWNLOAD_DEPENDENCIES=ON \
-  -DENABLE_Z3=1 \
-  -DENABLE_SOLIDITY_FRONTEND=On \
-  -DBUILD_STATIC=OFF \
-  -DCMAKE_BUILD_TYPE=Debug \
-  -DLLVM_DIR=/usr/lib/llvm-16/cmake \
-  -DClang_DIR=/usr/lib/llvm-16/cmake \
-  -DOVERRIDE_CLANG_HEADER_DIR=/usr/lib/llvm-16/lib/clang/16/include
+rm -rf build
+mkdir build
+cd build
 ```
 
 ```bash
@@ -153,5 +160,9 @@ cmake .. -DENABLE_Z3=1 -DENABLE_SOLIDITY_FRONTEND=On -DCMAKE_BUILD_TYPE=Debug
 ```
 
 ```bash
-make -j$(nproc)
+make -j2
+```
+
+```bash
+./build/src/esbmc/esbmc --sol integer_overflow_add.sol integer_overflow_add.solast --incremental-bmc --overflow-check
 ```
