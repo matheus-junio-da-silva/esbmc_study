@@ -129,6 +129,7 @@
           "text": "-enable-pretty-printing",
           "ignoreFailures": false
         }
+      ]
     }
   ]
 }
